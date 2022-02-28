@@ -32,8 +32,10 @@ cp -r ~/.config/alacritty/* 	~/setup/alacritty/
 cp -r ~/.config/i3/* 		~/setup/i3/
 cp -r ~/.config/polybar/* 	~/setup/polybar/
 cp -r ~/.config/picom/* 		~/setup/picom/
+cp -r ~/.config/picom 		~/setup/picom/
 cp -r ~/.config/fish/functions/*	~/setup/fish-functions/
 cp -r ~/.config/rofi-themes/* ~/setup/rofi-themes/
+cp -r ~/rofi-themes/* ~/setup/rofi-themes/
 cp -r ~/.config/dunst/* ~/setup/dunst/
 cp -r ~/rofi-themes/* ~/setup/rofi-themes/
 

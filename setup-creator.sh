@@ -1,6 +1,15 @@
 #!/usr/bin/fish
 
 set_color cyan;  echo -n " - "; set_color normal; echo "Creating configuration setup";
+set_color cyan;  echo -n " -> "; set_color normal; echo "i3";
+set_color cyan;  echo -n " -> "; set_color normal; echo "polybar";
+set_color cyan;  echo -n " -> "; set_color normal; echo "dunst";
+set_color cyan;  echo -n " -> "; set_color normal; echo "alacritty";
+set_color cyan;  echo -n " -> "; set_color normal; echo "picom";
+set_color cyan;  echo -n " -> "; set_color normal; echo "fish-functions";
+set_color cyan;  echo -n " -> "; set_color normal; echo "rofi-themes";
+set_color cyan;  echo -n " -> "; set_color normal; echo "doas";
+echo ""
 
 #rimozione setup vecchio
 set_color cyan;  echo -n " - "; set_color normal; echo "Erasing old setup";

@@ -4,29 +4,31 @@ set_color cyan;  echo -n " - "; set_color normal; echo "Creating configuration s
 
 #rimozione setup vecchio
 set_color cyan;  echo -n " - "; set_color normal; echo "Erasing old setup";
-rm -r -v -f ~/setup
+rm -r -f ~/setup
 
 #creazione directory
 set_color cyan;  echo -n " - "; set_color normal; echo "Creating directories";
-mkdir -p -v ~/setup/i3;
-mkdir -p -v ~/setup/polybar/scripts;
-mkdir -p -v ~/setup/picom;
-mkdir -p -v ~/setup/fish-functions;
-mkdir -p -v ~/setup/rofi-themes;
-mkdir -p -v ~/setup/alacritty;
-mkdir -p -v ~/setup/dunst;
+mkdir -p ~/setup/i3;
+mkdir -p ~/setup/polybar/scripts;
+mkdir -p ~/setup/picom;
+mkdir -p ~/setup/fish-functions;
+mkdir -p ~/setup/rofi-themes;
+mkdir -p ~/setup/alacritty;
+mkdir -p ~/setup/dunst;
 
 #copia di configurazioni
 set_color cyan;  echo -n " - "; set_color normal; echo "Copying configurations";
-cp -v /etc/doas.conf ~/setup/
-cp -r -v ~/.config/alacritty/* 	~/setup/alacritty/
-cp -r -v ~/.config/i3/* 		~/setup/i3/
-cp -r -v ~/.config/polybar/* 	~/setup/polybar/
-cp -r -v ~/.config/picom/* 		~/setup/picom/
-cp -r -v ~/.config/fish/functions/*	~/setup/fish-functions/
-cp -r -v ~/.config/rofi-themes/* ~/setup/rofi-themes/
-cp -r -v ~/.config/dunst/* ~/setup/dunst/
-cp -r -v ~/rofi-themes/* ~/setup/rofi-themes/
+cp /etc/doas.conf ~/setup/
+cp -r ~/.config/alacritty/* 	~/setup/alacritty/
+cp -r ~/.config/i3/* 		~/setup/i3/
+cp -r ~/.config/polybar/* 	~/setup/polybar/
+cp -r ~/.config/picom/* 		~/setup/picom/
+cp -r ~/.config/fish/functions/*	~/setup/fish-functions/
+cp -r ~/.config/rofi-themes/* ~/setup/rofi-themes/
+cp -r ~/.config/dunst/* ~/setup/dunst/
+cp -r ~/rofi-themes/* ~/setup/rofi-themes/
 
-set_color green;  echo -n " * "; set_color normal; echo "doas apt install" $argv;
-
+set_color green;  echo -n " * "; set_color normal; echo "zip -r ~/setup.zip ~/setup/";
+zip -r ~/setup.zip ~/setup/ 
+set_color green;  echo -n " * "; set_color normal; echo "rm -r -f ~/setup";
+rm -r -f ~/setup

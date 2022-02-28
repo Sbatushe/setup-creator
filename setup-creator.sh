@@ -28,6 +28,8 @@ cp -r ~/.config/rofi-themes/* ~/setup/rofi-themes/
 cp -r ~/.config/dunst/* ~/setup/dunst/
 cp -r ~/rofi-themes/* ~/setup/rofi-themes/
 
+set_color green;  echo -n " * "; set_color normal; echo "date > ~/setup/data-creazione.txt";
+date > ~/setup/data-creazione.txt
 set_color green;  echo -n " * "; set_color normal; echo "zip -r ~/setup.zip ~/setup/";
 zip -r ~/setup.zip ~/setup/ 
 set_color green;  echo -n " * "; set_color normal; echo "rm -r -f ~/setup";
